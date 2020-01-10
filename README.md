@@ -17,7 +17,7 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Machine
 #### functions
-	setPositions
+	advanceRotors
 	convert
 	convertChar
 
@@ -30,6 +30,7 @@ Hereafter, for each classes give function to be tested
 	rotorFactory
 	convertForward
 	convertBackward
+	advance
 
 ## Tricks & tips
 
