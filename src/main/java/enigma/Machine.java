@@ -7,12 +7,25 @@ public class Machine {
 	private Rotor rightRotor;
 	private Reflector reflector;
 
+	
+	
+	/**
+	 * initialise le reflecteur ainsi que les rotors (droite, milieu, gauche)
+	 * en prenant en entree un reflecteur, un rotor left, un rotor middle, un rotor right
+	 */
 	public void initRotors(Reflector reflector, Rotor left, Rotor middle, Rotor right) {
 		this.reflector = reflector;
 		leftRotor = left;
 		middleRotor = middle;
 		rightRotor = right;
 	}
+	
+	
+	/**
+	 * Permet d'initialiser les positions de chaque rotor
+	 * en prenant en entree une chaine de caractere de type String
+	 * 
+	 */
 
 	public void setPositions(String setting) {
 		char[] charSettings = setting.toCharArray();
@@ -22,12 +35,22 @@ public class Machine {
 		rightRotor.setPosition(Rotor.toIndex(charSettings[3]));
 	}
 	
-	public void configure(Reflector reflector, Rotor left, Rotor middle, Rotor right, String setting) {
+	
+	/**
+	 * fonction qui permet de mettre en place la machine en appelant les 2 fonctions precedentes
+	 * et en prenant en entree le reflecteur, tous les rotors ainsi que les parametres
+	 * a la fin, la machine self est configure
+	 */
+	public void configure(Reflector reflector, Rotor left, Rotor middle, Rotor right, String setting) { 
 		this.initRotors(reflector, left, middle, right);
 		this.setPositions(setting);
 
 	}
-
+	
+	/**
+	 * String msg en entree correspond au message à convertir a l'aide de la machine 
+	 * ca return le message converti
+	 */
 	public String convert(String msg) {
 		msg = msg.toUpperCase();
 		char[] msgChars = msg.toCharArray();

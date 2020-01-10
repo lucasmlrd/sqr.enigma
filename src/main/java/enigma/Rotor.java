@@ -8,16 +8,21 @@ public class Rotor {
     private int notch1 = -1;
     private int notch2 = -1;
 
-    public int getPosition() {
+    public int getPosition() { //return la position
         return position;
     }
 
-    public void setPosition(int posn) {
+    public void setPosition(int posn) { //changer la position
         position = posn;
     }
-    
+    /**
+     * 
+     * @param str
+     * @param notches
+     * @return rotor avec le message str chiffre
+     */
 	public static Rotor rotorFactory(String str, String notches){
-		char[] s = str.trim().replace(" ", "").toCharArray();
+		char[] s = str.trim().replace(" ", "").toCharArray(); //supprime espace
 		int[] cipher = new int[26];
 		for (int i = 0; i< 26; i++){
 			cipher[i] = toIndex(s[i]);
