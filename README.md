@@ -28,6 +28,8 @@ Hereafter, for each classes give function to be tested
 ### Classe Rotor
 #### function
 	rotorFactory
+	convertForward
+	convertBackward
 
 ## Tricks & tips
 
