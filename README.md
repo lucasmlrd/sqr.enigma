@@ -17,20 +17,16 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Machine
 #### functions
-	setPositions
-	initRotors
+	convert
+	convertChar
 
 ### Classe Reflector
 #### function 
 	reflectorFactory
-	convertForward
 	
 ### Classe Rotor
 #### function
 	rotorFactory
-	advance
-	convertForward
-	convertBackward
 
 ## Tricks & tips
 
